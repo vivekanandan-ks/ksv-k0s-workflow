@@ -1,0 +1,24 @@
+apiVersion: k0sctl.k0sproject.io/v1beta1
+kind: Cluster
+metadata:
+  name: k0s-cluster
+spec:
+  hosts:
+    - role: controller
+      ssh:
+        address: 127.0.0.1
+        port: 2222
+        user: root
+        keyPath: ~/.ssh/k0s_vm_key
+    - role: worker
+      ssh:
+        address: 127.0.0.1
+        port: 3333
+        user: root
+        keyPath: ~/.ssh/k0s_vm_key
+    - role: worker
+      ssh:
+        address: 127.0.0.1
+        port: 4444
+        user: root
+        keyPath: ~/.ssh/k0s_vm_key

@@ -1,0 +1,7 @@
+apiVersion: k0s.k0sproject.io/v1beta1
+kind: ClusterConfig
+metadata:
+  name: my-cluster-config
+spec:
+  extensions:
+    manifests: /home/ksvnixospc/Documents/ksvprojects/ksv-k0s-nix-package/k0sconfigautoapply/
